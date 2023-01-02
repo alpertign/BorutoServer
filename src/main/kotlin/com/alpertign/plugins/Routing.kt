@@ -2,6 +2,7 @@ package com.alpertign.plugins
 
 import com.alpertign.routes.getAllHeroes
 import com.alpertign.routes.root
+import com.alpertign.routes.searchHeroes
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -14,6 +15,7 @@ fun Application.configureRouting() {
     routing {
         root()
         getAllHeroes()
+        searchHeroes()
         static ("/images"){
             resources("images")
         }
