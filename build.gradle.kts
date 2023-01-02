@@ -4,9 +4,9 @@ val logbackVersion: String by project
 val koinKtor: String by project
 
 plugins {
-    kotlin("jvm") version "1.8.0"
-    id("io.ktor.plugin") version "2.2.1"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+    application
+    kotlin("jvm") version "1.7.10"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.10"
 }
 
 group = "com.alpertign"
@@ -34,5 +34,6 @@ dependencies {
 
     implementation ("io.insert-koin:koin-ktor:$koinKtor")
     implementation ("io.insert-koin:koin-logger-slf4j:$koinKtor")
+    implementation("io.ktor:ktor-server-default-headers:$ktorVersion")
 
 }
